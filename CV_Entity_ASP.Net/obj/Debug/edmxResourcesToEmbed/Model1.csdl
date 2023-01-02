@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbCVEntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBLADRE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TELEFON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADRES" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KONUM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLCALISMALARIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADRES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLHAKKIMDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BILGILER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EGITIM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ISDENEYIMLERI" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MESAJ" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
+    <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+=======
+>>>>>>> bc09f0e4f0a20e91f030221102c9791873f94846
+  </EntityType>
+  <EntityType Name="TBLYETENEKLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YETENEK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DERECE" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="DbCVEntityEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLADRES" EntityType="Self.TBLADRE" />
+    <EntitySet Name="TBLCALISMALARIMs" EntityType="Self.TBLCALISMALARIM" />
+    <EntitySet Name="TBLHAKKIMDAs" EntityType="Self.TBLHAKKIMDA" />
+    <EntitySet Name="TBLILETISIMs" EntityType="Self.TBLILETISIM" />
+    <EntitySet Name="TBLYETENEKLERs" EntityType="Self.TBLYETENEKLER" />
+  </EntityContainer>
+</Schema>
